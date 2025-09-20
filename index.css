@@ -1,0 +1,179 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+}
+
+/* --- Profile Section (Header Container) --- */
+.profile-section {
+    /* We'll use this as a padding container for the header.
+       The conflicting 'display: flex' and 'min-height' are removed. */
+    padding: 20px 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* This correctly centers the navbar horizontally */
+    padding: 20px 0;
+    /* The negative margin-top has been removed to fix the overlap */
+}
+
+.logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: 0;
+    /* The negative margin-left has been removed */
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    /* Margins are no longer needed for manual spacing */
+}
+
+.navbar nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #fd06d4;
+}
+
+.navbar nav a.active {
+    color: #ffff;
+}
+
+.cta-button {
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* --- Hero Section --- */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;                /* เพิ่มช่องว่างระหว่างข้อความกับรูป */
+    max-width: 1200px;
+    margin: 80px auto 0;      /* เว้นด้านบนจาก navbar */
+    padding: 0 50px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 450px;
+    color: #ddd;
+}
+
+.social-links {
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 2rem;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #fd06d4;
+}
+
+.profile-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.profile-image img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* --- Tech Stacks --- */
+.tech-stacks {
+    margin: 120px auto 60px;      /* เว้นห่างจาก Hero */
+    text-align: center;
+    max-width: 1000px;
+    padding: 0 40px;
+}
+.tech-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.tech-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 40px;                   /* ระยะห่างระหว่างไอคอน */
+    justify-items: center;
+}
+.tech-icons img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+.tech-icons img:hover {
+    transform: scale(1.15);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column-reverse;  /* รูปลงล่างเมื่อจอเล็ก */
+        text-align: center;
+        gap: 40px;
+    }
+    .text-content h1 {
+        font-size: 42px;
+    }
+    .profile-image img {
+        width: 240px;
+        height: 240px;
+    }
+}

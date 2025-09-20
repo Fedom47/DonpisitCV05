@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 0;
+    margin: 30px auto 0; /* เพิ่มค่านี้เพื่อขยับ Header ลงมา */
+}
+.your-container {
+  text-align: right; /* จัดเรียงข้อความและองค์ประกอบ inline ให้ชิดขวา */
+}
+.logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: 0;
+     margin-right: 20px; /* Adjust this value to move the logo further left */
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* จัดให้ About อยู่กึ่งกลาง */
+    gap: 150px; /* เพิ่มระยะห่างด้านข้างระหว่างลิงก์ */
+    margin: 0 auto;
+    padding: 0;
+}
+.navbar nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 10px; /* เพิ่ม padding 10px ซ้าย-ขวา */
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #fd06d4;
+}
+
+.navbar nav a.active {
+    color: #fd06d4;
+    font-weight: 700;
+}
+
+.cta-button {
+    margin-left: 100px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* ===== PORTFOLIO SECTION ===== */
+.portfolio-section {
+    padding: 120px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.portfolio-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-align: left;
+    padding-left: 100px;
+}
+
+.portfolio-items {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.portfolio-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.portfolio-item.reverse {
+    direction: rtl; /* This flips the content order for the text and image */
+}
+
+.item-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.item-text p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.item-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.item-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.view-button, .git-button {
+    display: inline-block;
+    padding: 12px 32px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.view-button:hover, .git-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.git-button i {
+    margin-right: 8px;
+}
